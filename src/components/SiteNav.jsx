@@ -36,7 +36,7 @@ const SiteNav = () => {
             </LinkContainer>
           </Nav>
           <Nav>
-            <LinkContainer to="/">
+            <LinkContainer to="/cart">
               <Nav.Link>
                 <img
                   src={cart}
