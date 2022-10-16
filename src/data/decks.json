@@ -1,0 +1,16 @@
+{
+  "decks": [
+    {
+      "name": "Draconic Descent",
+      "price": 39.99,
+      "description": "This is a cool deck featuring dragons.",
+      "source": "./deckimages/draconicdissent.webp"
+    },
+    {
+      "name": "Spirit Squadron",
+      "price": 24.99,
+      "description": "This is a cool deck featuring spirits.",
+      "source": "./deckimages/spiritsquadron.webp"
+    }
+  ]
+}

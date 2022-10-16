@@ -1,6 +1,18 @@
 import Form from "react-bootstrap/Form";
+import { useEffect, useState } from "react";
 
 const SearchFilter = () => {
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    console.log("home mounted");
+    setSearch("");
+  }, []);
+
+  const onSubmit = () => {
+    console.log(search);
+  };
+
   return (
     <>
       <Form>

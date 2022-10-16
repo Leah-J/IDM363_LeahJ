@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidebar">
-        <div>
+        <div className="filter-div">
           <h3>Filter</h3>
         </div>
         <SearchFilter />

@@ -6,11 +6,14 @@
   left: 0;
   padding-top: 5em;
   padding-left: 1em;
-
+  padding-right: 1em;
   background-color: lightblue;
   align-items: center;
   margin-right: auto;
   margin-left: auto;
+}
+
+.filter-div {
 }
 
 .shopcontent {
