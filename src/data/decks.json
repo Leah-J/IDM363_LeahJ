@@ -1,16 +1,40 @@
 {
   "decks": [
     {
-      "name": "Draconic Descent",
+      "name": "Draconic Dissent",
       "price": 39.99,
       "description": "This is a cool deck featuring dragons.",
       "source": "./deckimages/draconicdissent.webp"
+    },
+    {
+      "name": "Exit from Exile",
+      "price": 39.99,
+      "description": "This is a cool deck featuring the exile mechanic.",
+      "source": "./deckimages/exitexile.webp"
+    },
+    {
+      "name": "Mind Flayarrs",
+      "price": 39.99,
+      "description": "This is a cool deck featuring pirates.",
+      "source": "./deckimages/mindflayarrs.webp"
+    },
+    {
+      "name": "Party Time",
+      "price": 39.99,
+      "description": "This is a cool deck featuring the party mechanic.",
+      "source": "./deckimages/partytime.webp"
     },
     {
       "name": "Spirit Squadron",
       "price": 24.99,
       "description": "This is a cool deck featuring spirits.",
       "source": "./deckimages/spiritsquadron.webp"
+    },
+    {
+      "name": "Vampiric Bloodline",
+      "price": 24.99,
+      "description": "This is a cool deck featuring vampires.",
+      "source": "./deckimages/vampiricbloodline.webp"
     }
   ]
 }
