@@ -23,12 +23,10 @@ const Shop = ({ children }) => {
     <>
       <Layout>
         <Sidebar />
-        <body>
-          <div className="shopcontent">
-            {cards}
-            {children}
-          </div>
-        </body>
+        <div className="shopcontent">
+          {cards}
+          {children}
+        </div>
       </Layout>
     </>
   );
