@@ -16,10 +16,10 @@ const SiteNav = () => {
               src={logo}
               width="30"
               height="30"
-              alt="Logo for My Shop"
+              alt="Logo for Undercity Cards"
               className="d-inline-block align-top"
             />{" "}
-            My Shop
+            Undercity Cards
           </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
