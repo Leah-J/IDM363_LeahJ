@@ -15,7 +15,7 @@ const Shop = ({ children }) => {
         <ShopItemCard
           name={name}
           desc={description}
-          price={price}
+          price={"Add to cart: $" + price}
           source={source}
         />
       </Col>
