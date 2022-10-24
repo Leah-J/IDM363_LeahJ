@@ -9,6 +9,7 @@ const SearchFilter = () => {
     setSearch("");
   }, []);
 
+  // eslint-disable-next-line
   const onSubmit = () => {
     console.log(search);
   };
