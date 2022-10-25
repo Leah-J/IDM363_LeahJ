@@ -1,6 +1,7 @@
 import Layout from "../layouts/Layout";
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
+import LinkContainer from "react-router-bootstrap/LinkContainer";
 
 const Home = ({ children }) => {
   const [count, setCount] = useState(0);
@@ -14,14 +15,16 @@ const Home = ({ children }) => {
     <>
       <Layout>
         <body>
-          <Button
-            variant="primary"
-            onClick={() => {
-              setCount(count + 1);
-            }}
-          >
-            Count
-          </Button>
+          <LinkContainer to="/about">
+            <Button
+              variant="primary"
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              Count
+            </Button>
+          </LinkContainer>
           <p>Count is: {count}</p>
           {children}
         </body>
