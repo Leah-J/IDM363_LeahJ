@@ -36,7 +36,17 @@ function App() {
             element={
               <Cart>
                 <div>
-                  <p>This is the cart page</p>
+                  <p>Your cart is empty</p>
+                </div>
+              </Cart>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Cart>
+                <div>
+                  <p>Error: This page doesn't exist!</p>
                 </div>
               </Cart>
             }
