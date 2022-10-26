@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+# Welcome to Undercity Cards
+
+This is an online store for selling preconstructed Magic: The Gathering decks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## General Info
+
+I'm using react-bootstrap to save myself some time with CSS, as well as have some useful tools for building really nice looking components with useful behaviors. I'm personally a big fan of using the "Card" component for my shop items, as I feel likee they look quite nice.
+
+In general, this is nothing too crazy at the moment; I have a neat mapping setup on my shop page, but the rest of my site looks pretty rough. The cart page in particular does not exist. My admin view is also inoperable at this moment.
+
+## Stuff that My App Uses Right Noww
+
+Honestly no idea what/how you would go about building my app, but i have installed all of this stuff. Honestly not entirely sure how to make sure you're able to have all this stuff on your end. In general though, I remember using the following commands specifically:
+
+npm react-router-dom@6
+npm install react-bootstrap bootstrap
+npm install -S react-router-bootstrap
+npm install firebase
+
+So, if something isn't working, you probably need these. I believe since my repo has a package-lock.json, you can run the command:
+
+npm ci
+
+Which should update it with all the dependencies on your local machine. Keyword should. I have no idea if this works or not :D
+
+├── @testing-library/jest-dom@5.16.5
+├── @testing-library/react@13.4.0
+├── @testing-library/user-event@13.5.0
+├── bootstrap@5.2.2
+├── firebase@9.12.1
+├── react-bootstrap@2.5.0
+├── react-dom@18.2.0
+├── react-router-bootstrap@0.26.2
+├── react-router-dom@6.4.2
+├── react-scripts@5.0.1
+├── react@18.2.0
+└── web-vitals@2.1.4
 
 ## Available Scripts
 
@@ -13,58 +49,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
