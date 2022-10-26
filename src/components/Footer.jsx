@@ -1,7 +1,11 @@
+import "../App.css";
+
 const Footer = ({ children }) => {
   return (
     <>
-      <footer>{children}</footer>
+      <footer className="footer">
+        <p>admin</p>
+      </footer>
     </>
   );
 };
