@@ -4,6 +4,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Shop from "./components/pages/Shop";
 import Cart from "./components/pages/Cart";
+import Admin from "./components/pages/Admin";
 
 function App() {
   return (
@@ -39,6 +40,16 @@ function App() {
                   <p>Your cart is empty</p>
                 </div>
               </Cart>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <Admin>
+                <div>
+                  <p>Your cart is empty</p>
+                </div>
+              </Admin>
             }
           />
           <Route
