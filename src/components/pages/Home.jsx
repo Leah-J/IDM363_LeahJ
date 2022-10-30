@@ -2,6 +2,8 @@ import Layout from "../layouts/Layout";
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
 import LinkContainer from "react-router-bootstrap/LinkContainer";
+import Header from "../Header";
+import "./css/Home.css";
 
 const Home = ({ children }) => {
   const [count, setCount] = useState(0);
@@ -14,6 +16,11 @@ const Home = ({ children }) => {
   return (
     <>
       <Layout>
+        <div className="header-div">
+          <Header>
+            <h1 className="text-center">Welcome to Undercity Cards!</h1>
+          </Header>
+        </div>
         <body>
           <LinkContainer to="/about">
             <Button

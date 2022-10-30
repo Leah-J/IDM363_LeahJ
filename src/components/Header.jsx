@@ -1,7 +1,9 @@
+import "./pages/css/Home.css";
+
 const Header = ({ children }) => {
   return (
     <>
-      <header>{children}</header>
+      <header className="header">{children}</header>
     </>
   );
 };
