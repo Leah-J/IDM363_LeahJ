@@ -24,7 +24,7 @@ const SiteNav = () => {
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav classname="me-auto">
+          <Nav className="me-auto">
             <LinkContainer to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>

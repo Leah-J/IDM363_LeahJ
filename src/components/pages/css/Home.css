@@ -2,6 +2,23 @@
   width: 100%;
 }
 
-.header {
-  align-self: center;
+.header-content {
+  /* margin-top: 5rem; */
+  z-index: 50;
+}
+
+.bg-image {
+  height: 200px;
+  /* background-image: url("../../../../public/bg.jpg"); */
+}
+
+.header-image {
+  height: 100%;
+  object-fit: cover;
+  object-position: top right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }

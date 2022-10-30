@@ -4,9 +4,7 @@ import "../../index.css";
 const Cart = ({ children }) => {
   return (
     <>
-      <Layout>
-        <body>{children}</body>
-      </Layout>
+      <Layout>{children}</Layout>
     </>
   );
 };
