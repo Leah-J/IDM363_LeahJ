@@ -4,9 +4,13 @@ This is an online store for selling preconstructed Magic: The Gathering decks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Note!
+
+You will need my firebase api keys to run the site if you want the database context to work, so this might not work without this being hosted. LOL!
+
 ## General Info
 
-I'm using react-bootstrap to save myself some time with CSS, as well as have some useful tools for building really nice looking components with useful behaviors. I'm personally a big fan of using the "Card" component for my shop items, as I feel likee they look quite nice.
+I'm using react-bootstrap to save myself some time with CSS, as well as have some useful tools for building really nice looking components with useful behaviors. I'm personally a big fan of using the "Card" component for my shop items, as I feel like they look quite nice.
 
 In general, this is nothing too crazy at the moment; I have a neat mapping setup on my shop page, but the rest of my site looks pretty rough. The cart page in particular does not exist. My admin view is also inoperable at this moment.
 
