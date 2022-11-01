@@ -1,22 +1,19 @@
 import { useEffect } from "react";
 import { createContext, useState } from "react";
 
-let localState = {
-  setDecks: (data) => {},
-  decks: [],
-};
-
 export const StateContext = createContext({
   decks: [],
   setDecks: (data) => {},
 });
 
 export const StateContextProvider = ({ children }) => {
-  useEffect(() => {
-    localState = initialState;
-  }, []);
-
-  const setDecks = (data) => {};
+  const setDecks = (data) => {
+    console.log("data", data);
+    setState({
+      ...state,
+      ...data,
+    });
+  };
 
   const initialState = {
     decks: [],
@@ -24,6 +21,10 @@ export const StateContextProvider = ({ children }) => {
   };
 
   const [state, setState] = useState(initialState);
+
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
 
   return (
     <StateContext.Provider value={state}>{children}</StateContext.Provider>
