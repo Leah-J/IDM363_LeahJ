@@ -15,7 +15,7 @@ const Shop = ({ children }) => {
 
   const cards = decks.map(
     (decks = ({ name, description, price, keyName }) => (
-      <Col key={keyName}>
+      <Col key={keyName} className="justify-content-center">
         <ShopItemCard
           name={name}
           desc={description}
@@ -31,7 +31,9 @@ const Shop = ({ children }) => {
       <Layout>
         <Sidebar />
         <div className="shopcontent">
-          <Row lg={3}>{cards}</Row>
+          <Row lg={3} className="justify-content-center">
+            {cards}
+          </Row>
           {children}
         </div>
       </Layout>

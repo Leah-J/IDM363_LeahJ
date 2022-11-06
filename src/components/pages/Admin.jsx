@@ -26,16 +26,6 @@ const Admin = ({ children }) => {
       </Layout>
     </>
   );
-  // return (
-  //   <>
-  //     <Layout>
-  //       <div>
-  //         <h1>Time to do admin sh*t let's go?</h1>
-  //       </div>
-  //       {children}
-  //     </Layout>
-  //   </>
-  // );
 };
 
 export default Admin;
