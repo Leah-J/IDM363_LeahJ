@@ -7,40 +7,14 @@ import Cart from "./components/pages/Cart";
 import Admin from "./components/pages/Admin";
 import { StateContextProvider, StateContext } from "./store.jsx";
 import { useContext } from "react";
-import { collection, onSnapshot, query } from "firebase/firestore";
-import { useState } from "react";
-import { db } from "./firebase/firestore";
 import { useEffect } from "react";
 
 function App() {
-  const [decks, setDecks] = useState();
-  const deckArray = [];
-
   const state = useContext(StateContext);
 
   useEffect(() => {
-    const q = query(collection(db, "decks"));
-    onSnapshot(q, (querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id);
-        console.log(doc.data());
-        const deckData = {
-          keyName: doc.id,
-          ...doc.data(),
-        };
-        deckArray.push(deckData);
-      });
-      setDecks(deckArray);
-    });
-  }, []);
-
-  state.setDecks({
-    ...state,
-    decks: decks,
-  });
-
-  useEffect(() => {
     console.log(state);
+    console.log(state.decks);
   }, [state]);
 
   return (
@@ -83,7 +57,7 @@ function App() {
             element={
               <Admin>
                 <div>
-                  <p>Your cart is empty</p>
+                  <p>Haihaihaihaihai</p>
                 </div>
               </Admin>
             }

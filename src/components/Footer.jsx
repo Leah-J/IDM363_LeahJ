@@ -1,10 +1,13 @@
 import "../App.css";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Footer = ({ children }) => {
   return (
     <>
       <footer className="footer">
-        <p>admin</p>
+        <LinkContainer to="/admin">
+          <p>admin</p>
+        </LinkContainer>
       </footer>
     </>
   );
