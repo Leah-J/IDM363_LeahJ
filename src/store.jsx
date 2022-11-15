@@ -5,12 +5,18 @@ import { db } from "./firebase/firestore";
 
 export const StateContext = createContext({
   decks: [],
+  userCart: [],
+  addToCart: (name) => {},
+  setUserCart: (cart) => {},
   setDecks: (data) => {},
   sendChanges: (deck) => {},
 });
 
 let localState = {
   decks: [],
+  userCart: [],
+  addToCart: (name) => {},
+  setUserCart: (cart) => {},
   setDecks: (data) => {},
   sendChanges: (deck) => {},
 };
@@ -33,11 +39,36 @@ export const StateContextProvider = ({ children }) => {
         deckArray.push(deckData);
       });
       setDecks(deckArray);
+      initializeCart();
     });
+
+    //eslint-disable-next-line
   }, []);
 
+  const initializeCart = () => {
+    const shoppingCart = localState.decks.map((deck) => ({
+      ...deck,
+      in_cart: 0,
+    }));
+
+    setUserCart(shoppingCart);
+  };
+
+  const setUserCart = (cart) => {
+    localState.userCart = cart;
+    setState({ ...localState });
+  };
+
+  const addToCart = (name) => {
+    const cart = localState.userCart;
+    cart.forEach((deck) => {
+      if (deck.name === name) deck.in_cart++;
+    });
+
+    setUserCart(cart);
+  };
+
   const setDecks = (data) => {
-    // console.log("data", data);
     localState.decks = data;
     setState({
       ...localState,
@@ -52,16 +83,20 @@ export const StateContextProvider = ({ children }) => {
 
   const initialState = {
     decks: [],
+    userCart: [],
+    addToCart: addToCart,
+    setUserCart: setUserCart,
     setDecks: setDecks,
     sendChanges: sendChanges,
   };
 
   const [state, setState] = useState(initialState);
 
-  useEffect(() => {
-    console.log(state);
-    console.log(state.decks);
-  }, [state]);
+  // useEffect(() => {
+  //   console.log(state);
+  //   console.log(state.decks);
+  //   console.log(state.userCart);
+  // }, [state]);
 
   return (
     <StateContext.Provider value={state}>{children}</StateContext.Provider>

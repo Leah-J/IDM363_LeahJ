@@ -5,17 +5,15 @@ import About from "./components/pages/About";
 import Shop from "./components/pages/Shop";
 import Cart from "./components/pages/Cart";
 import Admin from "./components/pages/Admin";
-import { StateContextProvider, StateContext } from "./store.jsx";
-import { useContext } from "react";
-import { useEffect } from "react";
+import { StateContextProvider } from "./store.jsx";
 
 function App() {
-  const state = useContext(StateContext);
+  //const state = useContext(StateContext);
 
-  useEffect(() => {
-    console.log(state);
-    console.log(state.decks);
-  }, [state]);
+  // useEffect(() => {
+  //   console.log(state);
+  //   console.log(state.decks);
+  // }, [state]);
 
   return (
     <StateContextProvider>

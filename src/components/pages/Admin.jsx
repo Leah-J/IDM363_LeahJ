@@ -1,5 +1,4 @@
 import Layout from "../layouts/Layout";
-import Sidebar from "../shopitems/Sidebar";
 import { Row, Col } from "react-bootstrap";
 import { StateContext } from "../../store";
 import { useContext } from "react";
