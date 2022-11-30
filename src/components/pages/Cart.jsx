@@ -6,6 +6,12 @@ import CartItemCard from "../cartitems/CartItemCard";
 
 const Cart = ({ children }) => {
   const state = useContext(StateContext);
+
+  const { format } = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
   let userCart = state.userCart;
 
   let total = 0.0;
@@ -37,7 +43,7 @@ const Cart = ({ children }) => {
           </div>
         )}
         <div>
-          <h2>{total}</h2>
+          <h2>{format(total)}</h2>
         </div>
       </Layout>
     </>
