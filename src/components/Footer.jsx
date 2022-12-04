@@ -4,9 +4,9 @@ import { LinkContainer } from "react-router-bootstrap";
 const Footer = ({ children }) => {
   return (
     <>
-      <footer className="footer">
+      <footer className="footer ps-2 border bg-white align-self-center">
         <LinkContainer to="/admin">
-          <p>admin</p>
+          <p>Admin</p>
         </LinkContainer>
       </footer>
     </>

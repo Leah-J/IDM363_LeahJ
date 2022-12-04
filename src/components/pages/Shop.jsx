@@ -30,7 +30,7 @@ const Shop = ({ children }) => {
     <>
       <Layout>
         {/* <Sidebar /> */}
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center pb-4">
           <div className="row justify-content-center m-2 w-75 g-4">{cards}</div>
           {children}
         </div>

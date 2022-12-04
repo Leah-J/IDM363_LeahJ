@@ -8,6 +8,8 @@ export const StateContext = createContext({
   userCart: [],
   addToCart: (name) => {},
   removeFromCart: (name) => {},
+  removeAllFromCart: (name) => {},
+  checkout: () => {},
   setUserCart: (cart) => {},
   setDecks: (data) => {},
   sendChanges: (deck) => {},
@@ -18,6 +20,8 @@ let localState = {
   userCart: [],
   addToCart: (name) => {},
   removeFromCart: (name) => {},
+  removeAllFromCart: (name) => {},
+  checkout: () => {},
   setUserCart: (cart) => {},
   setDecks: (data) => {},
   sendChanges: (deck) => {},
@@ -73,7 +77,25 @@ export const StateContextProvider = ({ children }) => {
   const removeFromCart = (name) => {
     const cart = localState.userCart;
     cart.forEach((deck) => {
-      if (deck.name === name) deck.in_cart++;
+      if (deck.name === name) deck.in_cart--;
+    });
+
+    setUserCart(cart);
+  };
+
+  const removeAllFromCart = (name) => {
+    const cart = localState.userCart;
+    cart.forEach((deck) => {
+      if (deck.name === name) deck.in_cart = 0;
+    });
+
+    setUserCart(cart);
+  };
+
+  const checkout = () => {
+    const cart = localState.userCart;
+    cart.forEach((deck) => {
+      deck.in_cart = 0;
     });
 
     setUserCart(cart);
@@ -96,6 +118,8 @@ export const StateContextProvider = ({ children }) => {
     decks: [],
     userCart: [],
     removeFromCart: removeFromCart,
+    removeAllFromCart: removeAllFromCart,
+    checkout: checkout,
     addToCart: addToCart,
     setUserCart: setUserCart,
     setDecks: setDecks,
