@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 //import { useEffect, useState } from "react";
 import LinkContainer from "react-router-bootstrap/LinkContainer";
 import "./css/Home.css";
-import bg from "./bgCrop.jpg";
+import bg from "./bg.jpg";
 
 const Home = ({ children }) => {
   // const [count, setCount] = useState(0);
@@ -16,7 +16,7 @@ const Home = ({ children }) => {
   return (
     <>
       <Layout>
-        <div>
+        <div className="overflow-hidden">
           <div className="header-content d-flex justify-content-center">
             <h1 className="text-center fw-bold text-white header-text px-3 py-3 rounded-2">
               Welcome to Undercity Cards!

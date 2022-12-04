@@ -29,7 +29,7 @@ const Cart = ({ children }) => {
           <>
             <Container>
               <Row>
-                <Col>
+                <Col sm={8}>
                   <div className="ps-4">
                     {userCart.map(({ name, price, in_cart }, index) => {
                       total += price * in_cart;
@@ -47,7 +47,7 @@ const Cart = ({ children }) => {
                     })}
                   </div>
                 </Col>
-                <Col>
+                <Col sm={4}>
                   <Card
                     style={{ width: "18rem" }}
                     className="justify-content-center"

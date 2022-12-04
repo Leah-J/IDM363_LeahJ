@@ -5,8 +5,12 @@ import logo from "../images/set.png";
 import cart from "../images/cart.jpg";
 //import NavDropdown from "react-bootstrap/NavDropdown";
 import LinkContainer from "react-router-bootstrap/LinkContainer";
+import { Badge } from "react-bootstrap";
+import StateContext from "../store";
+import { useContext } from "react";
 
 const SiteNav = () => {
+  const state = useContext(StateContext);
   return (
     <Navbar bg="dark" fixed="top" expand="lg" variant="dark">
       <Container>
@@ -45,6 +49,11 @@ const SiteNav = () => {
                   alt="Shopping Cart"
                   className="d-inline-block align-mid"
                 />{" "}
+                <Badge bg="secondary">
+                  {state.userCart
+                    .map((item) => item.in_cart)
+                    .reduce((sum, curr) => sum + curr, 0)}
+                </Badge>
               </Nav.Link>
             </LinkContainer>
           </Nav>

@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import StateContext from "../../store";
 import { useState } from "react";
 import "./css/ItemPage.css";
-import { Button } from "react-bootstrap";
+import { Button, Card, Row, Col, Container } from "react-bootstrap";
 
 const ItemPage = ({ children }) => {
   const state = useContext(StateContext);
@@ -40,21 +40,40 @@ const ItemPage = ({ children }) => {
     <>
       <Layout>
         <div className="d-flex pt-2">
-          <img
-            src={"../deckimages/" + deckData.keyName + ".webp"}
-            alt={"Image of " + deckData.name + " deck box."}
-            className="align-self-center item-image"
-          />
-          <div>
-            <h2 className="ps-2">{deckData.name}</h2>
-            <p>{deckData.longdesc}</p>
-            <Button
-              variant="primary"
-              onClick={() => state.addToCart(deckData.name)}
-            >
-              Add to cart: {deckData.price}
-            </Button>
-          </div>
+          <Container>
+            <Row>
+              <Col sm={4}>
+                <Card style={{ width: "21rem" }}>
+                  <Card.Img
+                    variant="top"
+                    style={{ width: "20rem" }}
+                    src={"../deckimages/" + deckData.keyName + ".webp"}
+                  />
+                  {/* <img
+                    src={"../deckimages/" + deckData.keyName + ".webp"}
+                    alt={"Image of " + deckData.name + " deck box."}
+                    className="align-self-center item-image"
+                  /> */}
+                </Card>
+              </Col>
+              <Col sm={8}>
+                <div>
+                  <Card className="justify-content-center mt-4">
+                    <Card.Body>
+                      <Card.Title>{deckData.name}</Card.Title>
+                      <Card.Text>{deckData.longdesc}</Card.Text>
+                      <Button
+                        variant="primary"
+                        onClick={() => state.addToCart(deckData.name)}
+                      >
+                        Add to cart: {deckData.price}
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </Layout>
     </>

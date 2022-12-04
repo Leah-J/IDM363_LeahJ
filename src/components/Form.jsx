@@ -53,6 +53,15 @@ const Form = ({ deck }) => {
             value={copyDeck.price}
           />
         </div>
+        <div className="control">
+          <textarea
+            name="longdesc"
+            onChange={handleInputChange}
+            placeholder="Deck_Long_Desc"
+            type="text"
+            value={copyDeck.longdesc}
+          />
+        </div>
       </form>
       <Button onClick={() => save()}>Save</Button>
     </div>
