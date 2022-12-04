@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <SiteNav />
-      <div className="page-container">{children}</div>
+      <div>{children}</div>
       <Footer></Footer>
     </>
   );

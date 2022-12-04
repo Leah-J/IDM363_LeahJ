@@ -6,6 +6,7 @@ import Shop from "./components/pages/Shop";
 import Cart from "./components/pages/Cart";
 import Admin from "./components/pages/Admin";
 import { StateContextProvider } from "./store.jsx";
+import ItemPage from "./components/pages/ItemPage";
 
 function App() {
   //const state = useContext(StateContext);
@@ -30,16 +31,7 @@ function App() {
               </About>
             }
           />
-          <Route
-            path="/shop"
-            element={
-              <Shop>
-                <div>
-                  <p>This is the shop page</p>
-                </div>
-              </Shop>
-            }
-          />
+          <Route path="/shop" element={<Shop />} />
           <Route
             path="/cart"
             element={
@@ -70,6 +62,7 @@ function App() {
               </Cart>
             }
           />
+          <Route path="/shop/:id" element={<ItemPage />} />
         </Routes>
       </div>
     </StateContextProvider>

@@ -1,8 +1,7 @@
 import Layout from "../layouts/Layout";
 import "../../index.css";
 import ShopItemCard from "../shopitems/ShopItemCard";
-import Sidebar from "../shopitems/Sidebar";
-import { Row, Col } from "react-bootstrap";
+//import Sidebar from "../shopitems/Sidebar";
 import { StateContext } from "../../store";
 import { useContext } from "react";
 
@@ -15,25 +14,24 @@ const Shop = ({ children }) => {
 
   const cards = decks.map(
     (decks = ({ name, description, price, keyName }) => (
-      <Col key={keyName} className="justify-content-center">
+      <div key={keyName} className="col-auto justify-content-center m-1">
         <ShopItemCard
           name={name}
           desc={description}
           price={"Add to cart: $" + price}
           source={"./deckimages/" + keyName + ".webp"}
+          id={keyName}
         />
-      </Col>
+      </div>
     ))
   );
 
   return (
     <>
       <Layout>
-        <Sidebar />
-        <div className="shopcontent">
-          <Row lg={3} className="justify-content-center">
-            {cards}
-          </Row>
+        {/* <Sidebar /> */}
+        <div className="d-flex justify-content-center">
+          <div className="row justify-content-center m-2 w-75 g-4">{cards}</div>
           {children}
         </div>
       </Layout>

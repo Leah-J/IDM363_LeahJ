@@ -2,11 +2,6 @@
   color: #61dafb;
 }
 
-.page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
 .footer {
   position: fixed;
   bottom: 0;
