@@ -26,20 +26,13 @@ const Home = ({ children }) => {
         </div>
         <div className="text-center">
           <div>
-            <LinkContainer to="/about">
-              <Button
-                variant="dark"
-                // onClick={() => {
-                //   setCount(count + 1);
-                // }}
-              >
-                About Us
-              </Button>
+            <LinkContainer to="/shop">
+              <Button variant="dark">Explore Decks</Button>
             </LinkContainer>
           </div>
           <div className="py-2">
-            <LinkContainer to="/shop">
-              <Button variant="primary">Explore Decks</Button>
+            <LinkContainer to="/about">
+              <Button variant="secondary">About This Site</Button>
             </LinkContainer>
           </div>
           {/* <p>Count is: {count}</p> */}

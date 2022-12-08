@@ -63,7 +63,7 @@ const ItemPage = ({ children }) => {
                       <Card.Title>{deckData.name}</Card.Title>
                       <Card.Text>{deckData.longdesc}</Card.Text>
                       <Button
-                        variant="primary"
+                        variant="dark"
                         onClick={() => state.addToCart(deckData.name)}
                       >
                         Add to cart: {deckData.price}

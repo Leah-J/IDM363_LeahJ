@@ -20,7 +20,7 @@ const ShopItemCard = ({ name, desc, price, source, id }) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{desc}</Card.Text>
-          <Button variant="primary" onClick={() => state.addToCart(deckName)}>
+          <Button variant="dark" onClick={() => state.addToCart(deckName)}>
             {price}
           </Button>
         </Card.Body>

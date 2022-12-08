@@ -20,11 +20,12 @@ const CartItemCard = ({ name, price, in_cart }) => {
           <Card.Text>
             Quantity: {in_cart}, {format(price * in_cart)}
           </Card.Text>
-          <Button variant="primary" onClick={() => state.removeFromCart(name)}>
+          <Button variant="dark" onClick={() => state.removeFromCart(name)}>
             Remove One
           </Button>
+          <Button variant="light" disabled></Button>
           <Button
-            variant="primary"
+            variant="secondary"
             onClick={() => state.removeAllFromCart(name)}
           >
             Remove All

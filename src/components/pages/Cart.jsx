@@ -22,63 +22,63 @@ const Cart = ({ children }) => {
         <div className="d-flex justify-content-center">
           <h1 className="pt-1">Cart</h1>
         </div>
+        <>
+          <Container>
+            <Row className="mb-5">
+              <Col sm={8}>
+                <div className="ps-4">
+                  {userCart.map(({ name, price, in_cart }, index) => {
+                    total += price * in_cart;
+                    if (in_cart) {
+                      return (
+                        <CartItemCard
+                          name={name}
+                          price={price}
+                          in_cart={in_cart}
+                          key={name}
+                        />
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
+              </Col>
+              <Col sm={4}>
+                <Card
+                  style={{ width: "18rem" }}
+                  className="justify-content-center"
+                >
+                  <Card.Header>Checkout</Card.Header>
+                  <ListGroup className="list-group-flush">
+                    <ListGroup.Item>
+                      Total Items:{" "}
+                      {state.userCart
+                        .map((item) => item.in_cart)
+                        .reduce((sum, curr) => sum + curr, 0)}
+                    </ListGroup.Item>
 
-        {total ? (
-          <h3 className="text-center pt-4">Cart is empty</h3>
-        ) : (
-          <>
-            <Container>
-              <Row>
-                <Col sm={8}>
-                  <div className="ps-4">
-                    {userCart.map(({ name, price, in_cart }, index) => {
-                      total += price * in_cart;
-                      if (in_cart) {
-                        return (
-                          <CartItemCard
-                            name={name}
-                            price={price}
-                            in_cart={in_cart}
-                            key={name}
-                          />
-                        );
-                      }
-                      return null;
-                    })}
-                  </div>
-                </Col>
-                <Col sm={4}>
-                  <Card
-                    style={{ width: "18rem" }}
-                    className="justify-content-center"
-                  >
-                    <Card.Header>Checkout</Card.Header>
-                    <ListGroup className="list-group-flush">
-                      <ListGroup.Item>SubTotal: {format(total)}</ListGroup.Item>
-                      <ListGroup.Item>
-                        Tax: {format(total * 0.06)}
-                      </ListGroup.Item>
-                    </ListGroup>
-                    <Card.Body>
-                      <Card.Title>
-                        Total: {format(total + total * 0.06)}
-                      </Card.Title>
-                      <Button
-                        variant="primary"
-                        onClick={() => {
-                          state.checkout();
-                          alert("Thanks for giving me your money!");
-                        }}
-                      >
-                        Checkout
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-            </Container>
-          </>
-        )}
+                    <ListGroup.Item>SubTotal: {format(total)}</ListGroup.Item>
+                    <ListGroup.Item>Tax: {format(total * 0.06)}</ListGroup.Item>
+                  </ListGroup>
+                  <Card.Body>
+                    <Card.Title>
+                      Total: {format(total + total * 0.06)}
+                    </Card.Title>
+                    <Button
+                      variant="primary"
+                      onClick={() => {
+                        state.checkout();
+                        alert("Thanks for giving me your money!");
+                      }}
+                    >
+                      Checkout
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </>
       </Layout>
     </>
   );
